@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일 업로드</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-image-container">
+      <h2>파일 업로드</h2>
+      <img src="assets/images/파일업로드.jpg" alt="파일 업로드" width="100%" height="auto"/>
+    </div>
+    <!-- <div class="header-text-container" style="margin: 20px 0;">
+    <p style="font-size: 18px; font-weight: 400;">서버로 전송할 파일을 선택하세요.</p>
+    </div> -->
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <!-- 계획서 파일 업로드 영역 -->
+      <div class="file-upload-box">
+        <div class="upload-icon">
+          <i class="bi bi-cloud-arrow-up"></i>
+        </div>
+        <p class="upload-text">
+          계획서 파일을 업로드해주세요 
+          <span class="drop-hint">(최대 10개)</span>
+        </p>
+        <input type="file" id="planFile" name="plan_file" required multiple style="display: none;" />
+        <div class="file-list" id="planFileList"></div>
+        <label for="planFile" class="upload-button">파일 업로드</label>
+      </div>
+
+      <!-- 결과보고서 파일 업로드 영역 -->
+      <div class="file-upload-box" style="margin-top: 20px;">
+        <div class="upload-icon">
+          <i class="bi bi-cloud-arrow-up"></i>
+        </div>
+        <p class="upload-text">
+          결과보고서 파일을 업로드해주세요 
+          <span class="drop-hint">(최대 10개)</span>
+        </p>
+        <input type="file" id="reportFile" name="report_file" required multiple style="display: none;" />
+        <div class="file-list" id="reportFileList"></div>
+        <label for="reportFile" class="upload-button">파일 업로드</label>
+      </div>
+
+      <button type="submit" class="submit-button" style="margin-top: 10px">분석 요청</button>
+      <a href="board.html" class="button-link" style="margin-top: 10px">게시판 확인하기</a>
+      <a href="attendance.html" class="button-link" style="margin-top: 10px; background-color: #6c757d;">스터디 참석자 명단 확인하기</a>
+    </form>
+
+    <div id="status"></div>
+    <div id="resultContainer"></div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

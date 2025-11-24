@@ -1,0 +1,852 @@
+/* Paperlogy 폰트 정의 */
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-1Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-2ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-3Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-4Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-5Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-6SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-7Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-8ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('assets/fonts/Paperlogy-9Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Paperlogy';
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+}
+
+#uploadForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* 이미지 위에 h2 텍스트 오버레이 */
+.header-image-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+.header-image-container h2 {
+  font-weight: 500;
+  font-size: 34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  margin: 0;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  background: #ffffff;
+  /* border-radius: 8px; */
+  padding: 24px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* 파일 업로드 박스 스타일 */
+.file-upload-box {
+  background: #ffffff;
+  border: 1px solid #242424;
+  /* border-radius: 8px; */
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* margin-bottom: 16px; */
+  position: relative;
+}
+
+.upload-icon {
+  margin-bottom: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon i {
+  font-size: 48px;
+  color: #242424;
+}
+
+.upload-text {
+  font-size: 16px;
+  color: #242424;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.drop-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.file-upload-box .file-list {
+  display: none;
+}
+
+.file-upload-box.has-files {
+  padding: 12px 16px 20px;
+  align-items: stretch;
+  text-align: left;
+}
+
+.file-upload-box.has-files .upload-icon,
+.file-upload-box.has-files .upload-text {
+  display: none;
+}
+
+.file-upload-box.has-files .file-list {
+  display: block;
+  margin-top: 0;
+}
+
+.file-upload-box.has-files .upload-button {
+  margin-top: 16px;
+  align-self: center;
+}
+
+.file-upload-box.drag-over {
+  border: 2px dashed #007bff;
+  background-color: #f8fbff;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e0e0e0;
+  color: #242424;
+  border: none;
+  /* border-radius: 3px; */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.upload-button:hover {
+  background-color: #d0d0d0;
+}
+
+.file-list {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.file-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.file-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.file-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.file-list-item {
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  /* border-radius: 4px; */
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.2s ease;
+  border-radius: 50%;
+}
+
+.file-delete-btn:hover {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.file-delete-btn:active {
+  transform: scale(0.95);
+}
+
+.submit-button,
+.button-link {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* --- (신규) 버튼처럼 보이는 링크 --- */
+.button-link {
+  background-color: #28a745; /* 초록색 */
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #218838;
+}
+
+/* --- 결과 표시 스타일 (index.html, detail.html 공용) --- */
+
+#resultContainer,
+#detailContainer {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0; /* 패딩은 내부 .result-item-container가 가짐 */
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* 업로드/세부정보 페이지는 600px 유지 */
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* border-radius 적용을 위해 */
+}
+
+#resultContainer:empty {
+  display: none;
+}
+
+/* 개별 결과 항목 (접기/펼치기 단위) */
+.result-item-container {
+  padding: 0;
+  border-bottom: 1px solid #eee;
+}
+.result-item-container:last-child {
+  border-bottom: none;
+}
+
+/* 1. 클릭할 헤더 */
+.result-header {
+  cursor: pointer;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  background-color: #fcfcfc;
+}
+
+.result-header h3 {
+  margin: 0;
+  color: #0056b3;
+  text-align: left;
+}
+
+/* 2. 토글 아이콘 (장식) */
+.result-header::after {
+  content: "▼";
+  font-size: 0.8em;
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+/* 3. 펼쳐질 콘텐츠 (기본 숨김) */
+.result-content {
+  display: none;
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 4. 'active' 클래스가 붙었을 때 (펼쳐진 상태) */
+.result-item-container.active .result-content {
+  display: block;
+}
+
+.result-item-container.active .result-header::after {
+  transform: rotate(180deg);
+}
+
+/* 5. 에러 항목 */
+.result-item-container.error .result-header {
+  cursor: default;
+  background-color: #fff8f8;
+}
+.result-item-container.error .result-header h3 {
+  color: #d9534f;
+}
+.result-item-container.error .result-content {
+  display: block; /* 에러는 항상 보임 */
+}
+.result-item-container.error .result-header::after {
+  content: "⚠️";
+  transform: none;
+}
+
+/* --- 결과 콘텐츠 내부 스타일 --- */
+.result-content h4 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  border-left: 4px solid #007bff;
+  padding-left: 8px;
+}
+
+.result-content .result-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.result-content .result-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-content .result-item strong {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.result-content .result-item span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.result-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.result-content ul li {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.result-content ul li strong {
+  color: #333;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.result-content ul li p {
+  margin: 0;
+  color: #555;
+}
+
+.result-content p {
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- ✨ (수정) 검색 섹션 스타일 (board.html) --- */
+.search-section {
+  background: #EEEEEC;
+  padding: 35px;
+  /* margin-top: 20px; */
+  width: 100%;
+  max-width: 65%;
+  margin: 30px auto 10px auto;
+  box-sizing: border-box;
+  /* border: 1px solid #ddd;
+  border-radius: 5px; */
+}
+
+.search-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+.search-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-filters select {
+  padding: 12px; /* 왼쪽 여백 늘리기 */
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  min-width: 150px;
+  flex: 0 0 auto;
+  height: 40px;
+  background-color: #ffffff;
+  appearance: none;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+  align-items: center;
+}
+
+.search-input-group input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  /* border-radius: 5px; */
+  box-sizing: border-box;
+  height: 40px;
+  background-color: #ffffff;
+}
+
+.search-icon-btn {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  /* border-radius: 5px; */
+  background-color: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 40px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+}
+
+.search-icon-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.search-icon-btn i {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* --- ✨ (수정) 게시판 목록 스타일 (board.html) --- */
+#boardContainer {
+  background: #ffffff;
+  padding: 0;
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 65%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* (신규) 테이블 스타일 */
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board-table th,
+.board-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.board-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.board-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.board-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* --- ✨ (수정) 컬럼 너비 재조정 (목업 기준) --- */
+.board-table td:nth-child(1) {
+  width: 8%;
+  text-align: center;
+} /* 순위 */
+.board-table td:nth-child(2) {
+  width: 30%;
+  text-align: left;
+  padding-left: 20px;
+} /* 제목 */
+.board-table td:nth-child(3) {
+  width: 12%;
+  text-align: center;
+} /* 작성자 */
+.board-table td:nth-child(4) {
+  width: 12%;
+  text-align: center;
+} /* 캠퍼스 */
+.board-table td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+  font-weight: 600;
+  color: #007bff;
+} /* 채점현황 */
+.board-table td:nth-child(6) {
+  width: 23%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  white-space: nowrap;
+} /* 최종등록일 */
+
+/* (신규) 로딩 및 빈 상태 메시지 */
+.board-table .loading-row td,
+.board-table .empty-row td {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-style: italic;
+  cursor: default;
+}
+.board-table .empty-row:hover {
+  background-color: #fff;
+}
+
+/* --- detail.html용 스타일 --- */
+#detailContainer {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 20px auto 0;
+  max-width: 65%;
+  box-shadow: none;
+}
+
+.detail-content-wrapper {
+  background: #f5f5f5;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 사용자 정보, 총점, 감지된 사진 수를 하나의 박스로 묶기 */
+.detail-summary-box {
+  background: #EEEEEC;
+  padding: 30px;
+}
+
+/* 사용자 정보 섹션 */
+.detail-user-info {
+  background: transparent;
+  padding: 0 0 20px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.detail-user-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.detail-campus-name,
+.detail-author-name {
+  color: #007bff;
+}
+
+/* 총점 및 사진 수 섹션 */
+.detail-summary {
+  background: transparent;
+  padding: 20px 0 0 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-summary-item strong {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.detail-score-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* 항목별 세부 평가 섹션 */
+.detail-evaluation-section {
+  background: #ffffff;
+  padding: 30px;
+}
+
+.detail-evaluation-section h4 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  border: none;
+  padding: 0;
+}
+
+.detail-evaluation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-evaluation-item {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.detail-evaluation-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-evaluation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.detail-evaluation-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.detail-score-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-score-input {
+  width: 60px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #007bff;
+  background: #ffffff;
+}
+
+.detail-score-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.detail-score-separator {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-score-max {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-evaluation-description {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* --- (신규) 상세 페이지 버튼 컨테이너 --- */
+.detail-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.detail-button-container .button-link {
+  flex: 1;
+  margin: 0; /* 개별 마진 제거 */
+}
